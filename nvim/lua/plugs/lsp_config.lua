@@ -22,39 +22,39 @@ end
 
 mason.setup()
 mason_lspconfig.setup({
-    ensure_installed = { "pyright", "html", "cssls", "lua_ls" } -- Add other servers as needed
+    ensure_installed = { "pyright", "html", "cssls", "lua_ls", "ts_ls" }
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
--- Enable snippet support
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Setup Pyright for Python
 lspconfig.pyright.setup {
     on_attach = function(client, bufnr)
-
     end,
+
     capabilities = capabilities,
 }
 
--- Setup HTML LSP for HTML files
 lspconfig.html.setup {
     on_attach = function(client, bufnr)
-
     end,
+
     capabilities = capabilities,
 }
 
--- Setup CSS LSP for CSS files
 lspconfig.cssls.setup {
     on_attach = function(client, bufnr)
-
     end,
     capabilities = capabilities,
 }
 
--- Setup Lua Language Server for Lua
+lspconfig.ts_ls.setup {
+    on_attach = function(client, bufnr)
+    end,
+    capabilities = capabilities,
+}
+
 lspconfig.lua_ls.setup {
     settings = {
         Lua = {
@@ -64,8 +64,8 @@ lspconfig.lua_ls.setup {
         },
     },
     on_attach = function(client, bufnr)
-
     end,
+
     capabilities = capabilities,
 }
 

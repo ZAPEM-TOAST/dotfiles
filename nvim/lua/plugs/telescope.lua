@@ -12,13 +12,13 @@ telescope.setup({
   defaults = {
     layout_config = {
       horizontal = {
-        prompt_position = "top",-- Move the prompt box to the top
+        prompt_position = "top",
       },
       vertical = {
-        prompt_position = "top", -- Works for vertical layout too
+        prompt_position = "top",
       },
     },
-    sorting_strategy = "ascending", -- Ensures results appear below the prompt
+    sorting_strategy = "ascending",
   },
  })
 telescope.load_extension('project')

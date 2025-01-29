@@ -2,9 +2,6 @@
 -- status line setup
 require('plugs.lualine')
 
--- tabs setup
---require('plugs.bufferline')
-
 -- fuzzy finder setup
 require('plugs.telescope')
 

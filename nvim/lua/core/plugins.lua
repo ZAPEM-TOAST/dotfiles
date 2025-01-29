@@ -11,7 +11,6 @@ require("lazy").setup({
 
     -- ui
     { "nvim-lualine/lualine.nvim" },
-    --{ "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 
     -- auto save plugin
     --{'Pocco81/auto-save.nvim'},
